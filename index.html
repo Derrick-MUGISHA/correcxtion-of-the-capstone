@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Product Explorer</title>
+
+  <link
+    rel="stylesheet"
+    href="./css/style.css"
+  >
+</head>
+<body>
+
+<header>
+  <h1>Product Explorer</h1>
+
+  <div class="controls">
+
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search products..."
+    >
+
+    <select id="categoryFilter">
+      <option value="">All Categories</option>
+    </select>
+
+  </div>
+</header>
+
+<main>
+
+  <div id="loading" class="state">
+    Loading products...
+  </div>
+
+  <div id="error" class="state hidden">
+    <p>Something went wrong.</p>
+    <button id="retryBtn">Retry</button>
+  </div>
+
+  <div id="empty" class="state hidden">
+    No products found.
+  </div>
+
+  <section id="stats"></section>
+
+  <section
+    id="productsContainer"
+    class="products-grid"
+  ></section>
+
+</main>
+
+<div
+  id="productModal"
+  class="modal hidden"
+>
+  <div class="modal-content">
+
+    <button id="closeModal">
+      ✕
+    </button>
+
+    <div id="productDetails"></div>
+
+  </div>
+</div>
+
+<script
+  type="module"
+  src="./js/main.js"
+></script>
+
+</body>
+</html>
